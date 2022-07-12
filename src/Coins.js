@@ -1,4 +1,5 @@
 import './App.css';
+import './Coins.css';
 import MainCoins from './MainCoins';
 
 function Coins() {

@@ -13,9 +13,9 @@ import Home from './Home';
 function App() {
   return (
     <div className="App">
-      <p>Hello world</p>
+      <h1>Hello world</h1>
       <BrowserRouter>
-      <div>
+      <div className='App-header'>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -32,7 +32,6 @@ function App() {
         </ul>
       </div>
 
-        <hr />
       <div>
       <Routes>
         <Route path="users" element={<Users />} />

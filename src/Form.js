@@ -13,9 +13,9 @@ export default function Form() {
   }
 
   return (
-    <div className="App">
+    <div className="box">
       <h1>Ingresa una palabra:</h1>
-      <div>
+      <div className="box_input">
         <input value={text} onChange={handleTextChange} />
       </div>
       <button onClick={handleClick}>Show alert</button>

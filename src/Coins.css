@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+.Coins-header h2 {
+    background-color: #282c34;
+}
+
+.cointainer {
+    width:100%;
+    max-width: 40vw;
+    margin: auto;
+    padding: 2vw;
+    font-family: 'DM Mono', monospace;
+    font-weight: normal;
+    color: #282c34;
+  }
+  
+  .item {
+    background-color: #b6d9e7;
+    padding: 6vmin;
+    margin-bottom: 1em;
+    border: 1px solid #282c34;
+    box-shadow: 3px 3px #282c34;
+  }
+  
+  dt {
+    font-size: calc(1.25rem + 0.5vmin);
+  }
+  
+  dd {
+    font-size: 1.25rem;
+    margin-left: .25rem;
+    list-style: url('./coins.png');
+    line-height: 1.25em;
+    text-align: left;
+  }
+
+  .pic {
+    text-align: center;
+  }
+  
+  .cointainer img {
+    max-width: 40%;
+    animation: spin infinite 10s linear;
+    text-align: center;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
