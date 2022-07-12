@@ -8,6 +8,7 @@ import {
 import Users from './Users';
 import Coins from './Coins';
 import WordBox from './WordBox';
+import Home from './Home';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <BrowserRouter>
       <div>
         <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/Users">Users</Link>
           </li>
@@ -34,6 +38,7 @@ function App() {
         <Route path="users" element={<Users />} />
         <Route path="coins" element={<Coins />} />
         <Route path="wordbox" element={<WordBox />} />
+        <Route exact path="/" element={<Home />} />
       </Routes>
       </div>
       </BrowserRouter>
