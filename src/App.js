@@ -9,11 +9,13 @@ import Users from './Users';
 import Coins from './Coins';
 import WordBox from './WordBox';
 import Home from './Home';
+import Greeting from './Greeting';
 
 function App() {
   return (
     <div className="App">
       <h1>Hello world</h1>
+      <Greeting />
       <BrowserRouter>
       <div className='App-header'>
         <ul>
@@ -43,6 +45,7 @@ function App() {
       </BrowserRouter>
     </div>
   );
+  
 }
 
 

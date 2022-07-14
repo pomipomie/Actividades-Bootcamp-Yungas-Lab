@@ -4,6 +4,14 @@
     background-color: #282c34;
 }
 
+.Coins-header a {
+  color: #b6d9e7;
+}
+
+.Coins-header a:any-link {
+  text-decoration: none;
+}
+
 .cointainer {
     width:100%;
     max-width: 40vw;
