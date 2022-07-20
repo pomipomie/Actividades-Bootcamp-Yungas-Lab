@@ -7,7 +7,12 @@
  * 4. Copy the config object snippet, then add it here.
  */
 const config = {
-  /* TODO: ADD YOUR FIREBASE CONFIGURATION OBJECT HERE */
+    apiKey: "AIzaSyC5SQOs-1KwiijrO0XL9rNLlT3KhJFbbnY",
+    authDomain: "codelab-friendly-chat-pomi.firebaseapp.com",
+    projectId: "codelab-friendly-chat-pomi",
+    storageBucket: "codelab-friendly-chat-pomi.appspot.com",
+    messagingSenderId: "691567903802",
+    appId: "1:691567903802:web:4a50305027715d77c9e103"
 };
 
 export function getFirebaseConfig() {
