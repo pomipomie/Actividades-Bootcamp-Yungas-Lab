@@ -1,0 +1,127 @@
+[debug] [2022-07-20T23:38:08.776Z] ----------------------------------------------------------------------
+[debug] [2022-07-20T23:38:08.780Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-07-20T23:38:08.781Z] CLI Version:   11.3.0
+[debug] [2022-07-20T23:38:08.781Z] Platform:      win32
+[debug] [2022-07-20T23:38:08.781Z] Node Version:  v16.15.0
+[debug] [2022-07-20T23:38:08.782Z] Time:          Wed Jul 20 2022 20:38:08 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-07-20T23:38:08.783Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-20T23:38:08.894Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-20T23:38:08.895Z] > authorizing via signed-in user (furikixio@gmail.com)
+[debug] [2022-07-20T23:38:08.895Z] [iam] checking project friendlyeats-974a6 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-20T23:38:08.900Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions [none]
+[debug] [2022-07-20T23:38:08.900Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-20T23:38:09.846Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions 200
+[debug] [2022-07-20T23:38:09.846Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-20T23:38:09.849Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 [none]
+[debug] [2022-07-20T23:38:10.943Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 200
+[debug] [2022-07-20T23:38:10.944Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 {"projectId":"friendlyeats-974a6","projectNumber":"1038650148095","displayName":"FriendlyEats","name":"projects/friendlyeats-974a6","resources":{"hostingSite":"friendlyeats-974a6","storageBucket":"friendlyeats-974a6.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'friendlyeats-974a6'...
+[info] 
+[info] i  deploying firestore, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-07-20T23:38:10.959Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6:test [none]
+[debug] [2022-07-20T23:38:10.959Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6:test [omitted]
+[debug] [2022-07-20T23:38:11.878Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6:test 200
+[debug] [2022-07-20T23:38:11.878Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-07-20T23:38:11.881Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 [none]
+[debug] [2022-07-20T23:38:12.489Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 200
+[debug] [2022-07-20T23:38:12.489Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 {"projectId":"friendlyeats-974a6","projectNumber":"1038650148095","displayName":"FriendlyEats","name":"projects/friendlyeats-974a6","resources":{"hostingSite":"friendlyeats-974a6","storageBucket":"friendlyeats-974a6.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-07-20T23:38:12.495Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions [none]
+[debug] [2022-07-20T23:38:12.495Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"**/*.@(js|html)","headers":{"Cache-Control":"max-age=0"}}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-20T23:38:14.021Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions 200
+[debug] [2022-07-20T23:38:14.021Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions {"name":"projects/1038650148095/sites/friendlyeats-974a6/versions/e05c35d7f3e5c9c1","status":"CREATED","config":{"headers":[{"headers":{"Cache-Control":"max-age=0"},"glob":"**/*.@(js|html)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-20T23:38:14.029Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/releases pageSize=10&pageToken=
+[debug] [2022-07-20T23:38:14.032Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-07-20T23:38:14.826Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-07-20T23:38:14.827Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/indexes {"indexes":[{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgNiav4AK","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgJim14AK","queryScope":"COLLECTION","fields":[{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgOjXh4EK","queryScope":"COLLECTION","fields":[{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgJj7z4EK","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgNjpgYIK","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgJjF9oIK","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgJiUpoMK","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/restaurants/indexes/CICAgNi47oMK","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}],"state":"READY"}]}
+[debug] [2022-07-20T23:38:14.827Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-07-20T23:38:15.041Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/releases 200
+[debug] [2022-07-20T23:38:15.041Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/releases {"releases":[{"name":"projects/friendlyeats-974a6/releases/cloud.firestore","rulesetName":"projects/friendlyeats-974a6/rulesets/72e39adb-2a9c-4ed2-b1d2-f0f66403f05e","createTime":"2022-07-20T22:52:49.116516Z","updateTime":"2022-07-20T23:22:57.573959Z"}]}
+[debug] [2022-07-20T23:38:15.042Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/rulesets/72e39adb-2a9c-4ed2-b1d2-f0f66403f05e [none]
+[debug] [2022-07-20T23:38:15.370Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-07-20T23:38:15.370Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/friendlyeats-974a6/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/friendlyeats-974a6/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2022-07-20T23:38:15.371Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"}]}
+[debug] [2022-07-20T23:38:15.371Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"price","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"avgRating","order":"DESCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"price","order":"ASCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"city","order":"ASCENDING"},{"fieldPath":"price","order":"ASCENDING"}]}
+[debug] [2022-07-20T23:38:15.372Z] Skipping existing index: {"collectionGroup":"restaurants","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"numRatings","order":"DESCENDING"}]}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2022-07-20T23:38:16.042Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/rulesets/72e39adb-2a9c-4ed2-b1d2-f0f66403f05e 200
+[debug] [2022-07-20T23:38:16.042Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/friendlyeats-974a6/rulesets/72e39adb-2a9c-4ed2-b1d2-f0f66403f05e [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[friendlyeats-974a6]: beginning deploy... 
+[debug] [2022-07-20T23:38:16.096Z] Error: EPERM: operation not permitted, scandir 'C:/Users/furik/Documents/Webprojects/friendlyeats-web/firebase-debug.log'
+    at Object.readdirSync (node:fs:1405:3)
+    at GlobSync._readdir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:285:46)
+    at GlobSync._readdirInGlobStar (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:242:17)
+    at GlobSync._readdir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:273:17)
+    at GlobSync._processReaddir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:134:22)
+    at GlobSync._process (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:129:10)
+    at GlobSync._processGlobStar (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:377:10)
+    at GlobSync._process (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:127:10)
+    at new GlobSync (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+    at listFiles (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:28)
+    at runDeploys (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:42:49)
+    at deploy (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:83:12)
+    at chain (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:33:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async deploy (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:69:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-20T23:39:40.176Z] ----------------------------------------------------------------------
+[debug] [2022-07-20T23:39:40.181Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2022-07-20T23:39:40.182Z] CLI Version:   11.3.0
+[debug] [2022-07-20T23:39:40.183Z] Platform:      win32
+[debug] [2022-07-20T23:39:40.183Z] Node Version:  v16.15.0
+[debug] [2022-07-20T23:39:40.185Z] Time:          Wed Jul 20 2022 20:39:40 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-07-20T23:39:40.186Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-20T23:39:40.317Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-20T23:39:40.321Z] > authorizing via signed-in user (furikixio@gmail.com)
+[debug] [2022-07-20T23:39:40.321Z] [iam] checking project friendlyeats-974a6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-20T23:39:40.325Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions [none]
+[debug] [2022-07-20T23:39:40.326Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-20T23:39:41.333Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions 200
+[debug] [2022-07-20T23:39:41.333Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-974a6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-20T23:39:41.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 [none]
+[debug] [2022-07-20T23:39:41.706Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 200
+[debug] [2022-07-20T23:39:41.707Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 {"projectId":"friendlyeats-974a6","projectNumber":"1038650148095","displayName":"FriendlyEats","name":"projects/friendlyeats-974a6","resources":{"hostingSite":"friendlyeats-974a6","storageBucket":"friendlyeats-974a6.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'friendlyeats-974a6'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-07-20T23:39:41.717Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 [none]
+[debug] [2022-07-20T23:39:42.201Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 200
+[debug] [2022-07-20T23:39:42.202Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendlyeats-974a6 {"projectId":"friendlyeats-974a6","projectNumber":"1038650148095","displayName":"FriendlyEats","name":"projects/friendlyeats-974a6","resources":{"hostingSite":"friendlyeats-974a6","storageBucket":"friendlyeats-974a6.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-07-20T23:39:42.207Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions [none]
+[debug] [2022-07-20T23:39:42.208Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"**/*.@(js|html)","headers":{"Cache-Control":"max-age=0"}}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-20T23:39:43.669Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions 200
+[debug] [2022-07-20T23:39:43.669Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038650148095/sites/friendlyeats-974a6/versions {"name":"projects/1038650148095/sites/friendlyeats-974a6/versions/941e714605731596","status":"CREATED","config":{"headers":[{"headers":{"Cache-Control":"max-age=0"},"glob":"**/*.@(js|html)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[friendlyeats-974a6]: beginning deploy... 
+[debug] [2022-07-20T23:39:43.727Z] Error: EPERM: operation not permitted, scandir 'C:/Users/furik/Documents/Webprojects/friendlyeats-web/firebase-debug.log'
+    at Object.readdirSync (node:fs:1405:3)
+    at GlobSync._readdir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:285:46)
+    at GlobSync._readdirInGlobStar (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:242:17)
+    at GlobSync._readdir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:273:17)
+    at GlobSync._processReaddir (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:134:22)
+    at GlobSync._process (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:129:10)
+    at GlobSync._processGlobStar (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:377:10)
+    at GlobSync._process (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:127:10)
+    at new GlobSync (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+    at listFiles (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:28)
+    at runDeploys (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:42:49)
+    at deploy (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:83:12)
+    at chain (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:33:15)
+    at deploy (C:\Users\furik\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:69:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.
